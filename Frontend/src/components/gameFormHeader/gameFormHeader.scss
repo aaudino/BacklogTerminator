@@ -1,0 +1,44 @@
+.GameFormHeader {
+  height: 40%;
+  display: grid;
+  grid-template-columns: 55% 45%;
+  grid-template-rows: 55% 20% 20%;
+  justify-items: center;
+  align-items: center;
+  row-gap: 3%;
+  border-radius: 20px;
+  padding: 2.5rem;
+
+  background-size: cover;
+  background-position: 100% 12%;
+
+  background-repeat: no-repeat;
+  border-radius: 0 0 20px 20px;
+
+  h1 {
+    justify-self: start;
+  }
+
+  img {
+    max-height: 100%;
+    max-width: 100%;
+    grid-row: 1/3;
+    border-radius: 5%;
+    grid-column: 2;
+  }
+  .hoursToBeat {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    gap: 0.5rem;
+    border-radius: 3px;
+    padding: 2%;
+    background-color: #6441a5;
+    background-color: #5c16c5;
+    color: whitesmoke;
+    font-weight: bold;
+    align-self: baseline;
+    justify-self: flex-start;
+    grid-row: 2;
+  }
+}

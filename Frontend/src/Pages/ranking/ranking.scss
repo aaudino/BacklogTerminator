@@ -1,0 +1,29 @@
+@import "../../variables.scss";
+
+.Ranking {
+  height: 92vh;
+  overflow-y: auto;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.97),
+      rgba(255, 255, 255, 0.95),
+      rgba(81, 45, 168, 0.97)
+    ),
+    url(https://howlongtobeat.com/img/xbox/gamepass_background.jpg?crop=2:1&quality=75);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  padding: 5%;
+
+  .ranking-heading {
+    h1,
+    h2 {
+      text-align: center;
+    }
+
+    h1 {
+      color: $colorMain;
+    }
+  }
+}

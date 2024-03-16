@@ -1,0 +1,15 @@
+.StarRating {
+}
+
+.starContainer {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  p {
+    padding: 0;
+  }
+}
+
+.starRatingContainer {
+  display: flex;
+}

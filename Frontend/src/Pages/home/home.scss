@@ -1,0 +1,84 @@
+@import "../../variables.scss";
+.Home {
+}
+
+.heroContainer {
+  height: 92vh;
+  width: 100vw;
+  position: relative;
+
+  video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .headingContainer {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    top: 40%;
+    z-index: 3;
+    h1 {
+      font-size: 5rem;
+      color: White;
+      margin: 0 auto;
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      font-size: 3.5rem;
+      color: white;
+    }
+  }
+}
+
+.presentationContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.98),
+      rgba(255, 255, 255, 0.95),
+      rgba(81, 45, 168, 0.99)
+    ),
+    url(https://howlongtobeat.com/img/xbox/gamepass_background.jpg?crop=2:1&quality=75);
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 5%;
+  gap: 5.5rem;
+
+  .presentationContainer--item {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-items: center;
+    gap: 1.5rem;
+    border: $border;
+    border-radius: $borderRadius;
+    padding: 2.5rem;
+    box-shadow: $shadow;
+    transform: skewX(-5deg);
+
+    h2 {
+      font-size: 3.5rem;
+      color: $colorMain;
+      text-align: center;
+    }
+    p,
+    li {
+      font-size: 1.7rem;
+    }
+    &:last-of-type {
+      color: white;
+      h2 {
+        color: white;
+      }
+    }
+  }
+}

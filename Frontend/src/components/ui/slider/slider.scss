@@ -1,0 +1,37 @@
+.Slider {
+  width: 100%;
+}
+
+.slider {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 2.5rem;
+  margin-bottom: 2.5rem;
+  &Container {
+    width: 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    border: 2px solid #edeeee;
+    border-radius: 8px;
+    background-color: white;
+  }
+  &Item {
+    background-color: white;
+    color: #512da8;
+    border-radius: 8px;
+    height: 100%;
+    width: 80%;
+    text-align: center;
+    transition: 0.4s;
+    font-weight: 700;
+    cursor: pointer;
+    &--active {
+      background-color: #512da8;
+      color: white;
+    }
+  }
+}

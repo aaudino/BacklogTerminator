@@ -1,0 +1,104 @@
+.FormCheckbox {
+  input[type="checkbox"] {
+    // position: absolute;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-25%, -25%);
+    // display: none;
+    // z-index: -2;
+    background-color: red;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  input.checked {
+    // content: "2714";
+    // font-size: 1.5em;
+    // color: #fff;
+    // position: absolute;
+    // right: 1px;
+    // top: -5px;
+    background-color: blue;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+}
+
+input[type="checkbox"],
+input.checked {
+  // // position: absolute;
+  // // top: 50%;
+  // // left: 50%;
+  // // transform: translate(-25%, -25%);
+  // // display: none;
+  // // z-index: -2;
+  // background-color: red;
+  // -webkit-appearance: none;
+  // appearance: none;
+  // height: 2.5rem;
+  // width: 2.5rem;
+  // border: 2px solid #5c16c5;
+}
+
+// input.checked {
+//   // content: "2714";
+//   // font-size: 1.5em;
+//   // color: #fff;
+//   // position: absolute;
+//   // right: 1px;
+//   // top: -5px;
+//   background-color: blue;
+//   -webkit-appearance: none;
+//   appearance: none;
+//   height: 2.5rem;
+//   width: 2.5rem;
+// }
+
+input[type="checkbox"] {
+  /* removing default appearance */
+  -webkit-appearance: none;
+  appearance: none;
+  /* creating a custom design */
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 2px solid #d1d5db;
+  border-radius: 12%;
+
+  cursor: pointer;
+}
+
+input.checked {
+  border: 2px solid #5c16c5;
+  background: linear-gradient(to right, #5c16c5, #8b55b9),
+    linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+  position: relative;
+}
+
+input.checked::before {
+  content: "\2713";
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff !important;
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  transform: translate(50%, -50%);
+}
+
+// .checkboxContainer,
+// .checkboxContainerChecked {
+//   height: 2.5rem;
+//   aspect-ratio: 1/1;
+//   border: 2px solid #333333;
+//   border-radius: 12%;
+//   cursor: pointer;
+//   position: relative;
+// }
+
+// .checkboxContainer {
+// }
+// .checkboxContainerChecked {
+//   // border: 2px solid #5c16c5;
+//   // background: linear-gradient(to right, #5c16c5, #8b55b9),
+//   //   linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+// }

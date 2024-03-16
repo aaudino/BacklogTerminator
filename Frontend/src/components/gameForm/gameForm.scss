@@ -1,0 +1,31 @@
+.GameForm {
+  height: 100%;
+
+  h2 {
+    text-align: center;
+  }
+}
+
+form,
+.buttonContainer,
+.communityTabContainer {
+  padding: 0 2.5rem;
+}
+
+form,
+.communityTabContainer {
+  display: flex;
+  flex-direction: column;
+  height: 45%;
+  overflow-x: auto;
+}
+
+.communityTabContainer {
+  gap: 3.5rem;
+}
+
+.buttonContainer {
+  display: flex;
+  margin-top: 1.5rem;
+  justify-content: space-between;
+}

@@ -1,0 +1,21 @@
+.Backlog {
+  display: flex;
+  max-width: 100%;
+  flex-direction: column;
+  align-items: center;
+  height: 92vh;
+  overflow-y: auto;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.95),
+      rgba(255, 255, 255, 0.85),
+      rgba(81, 45, 168, 0.94)
+    ),
+    url(https://howlongtobeat.com/img/xbox/gamepass_background.jpg?crop=2:1&quality=75);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  width: 100%;
+  padding: 0 1%;
+}

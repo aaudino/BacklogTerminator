@@ -1,0 +1,82 @@
+.BacklogOverviewItem {
+}
+
+.test {
+  height: 12rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 25% repeat(4, 18.75%);
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+  border-radius: 8px;
+  justify-items: center;
+  transition: 0.3s;
+  border: 2px solid #edeeee;
+  background: white;
+  padding: 0.3rem;
+  &:hover {
+    box-shadow: 0 1rem 2rem rgba(92, 22, 197, 0.5);
+    transform: translateY(-20px);
+    cursor: pointer;
+  }
+
+  h3 {
+    grid-row: 1;
+    grid-column: 2/ 5;
+    align-self: center;
+    justify-self: left;
+    font-size: 1.5rem;
+    width: 100%;
+    // color: #eee;
+    padding: 0.2rem;
+    text-transform: capitalize;
+    // background: linear-gradient(
+    //   to right,
+    //   #673ab7,
+    //   #512da8
+    // ); /* Apply the gradient as background */
+
+    // background-size: 200% 200%;
+    // -webkit-background-clip: text;
+    // -webkit-text-stroke: 2px transparent;
+  }
+
+  img {
+    grid-column: 1;
+    grid-row: 1 / -1;
+    max-height: 90%;
+    max-width: 100%;
+    display: block;
+    align-self: center;
+    justify-self: center;
+    border-radius: 8px;
+    padding: 3%;
+  }
+  .playtime {
+    grid-column: 2 / 4;
+    grid-row: 2;
+    justify-self: left;
+    padding: 0.2rem;
+    display: flex;
+    align-items: center;
+
+    h4 {
+      font-size: 1.2rem;
+      background: linear-gradient(to right, #673ab7, #512da8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+  .platform {
+    grid-column: 5;
+    grid-row: 2;
+    color: #eee;
+    text-transform: capitalize;
+    background: linear-gradient(to right, #673ab7, #512da8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .ratingComponent {
+    grid-column: 5;
+  }
+}

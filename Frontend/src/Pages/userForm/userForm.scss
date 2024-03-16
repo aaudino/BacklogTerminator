@@ -1,0 +1,54 @@
+.UserForm {
+  height: 92vh;
+  overflow-y: auto;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.95),
+      rgba(255, 255, 255, 0.85),
+      rgba(81, 45, 168, 0.94)
+    ),
+    url(https://howlongtobeat.com/img/xbox/gamepass_background.jpg?crop=2:1&quality=75);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.userFormContainer {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #edeeee;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  width: min(60rem, 90%);
+  height: 30rem;
+  max-height: 35rem;
+  background-color: white;
+
+  margin: 5rem auto;
+
+  h1 {
+    align-self: center;
+  }
+
+  &--form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    gap: 1.2rem;
+
+    justify-content: center;
+
+    input {
+      height: 15%;
+    }
+
+    button {
+      max-width: 20%;
+      margin-top: 2rem;
+    }
+    p {
+      text-align: center;
+      height: 10%;
+    }
+  }
+}

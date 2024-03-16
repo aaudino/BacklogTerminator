@@ -1,0 +1,18 @@
+.Genres {
+}
+
+.genres {
+  display: flex;
+  flex-flow: wrap;
+  gap: 0.2rem;
+  justify-self: baseline;
+  width: 100%;
+
+  .genreItem {
+    background: linear-gradient(to right top, #5c16c5, #9c51e1);
+    color: white;
+    border-radius: 12px;
+    padding: 1.2%;
+    font-size: 1.1rem;
+  }
+}

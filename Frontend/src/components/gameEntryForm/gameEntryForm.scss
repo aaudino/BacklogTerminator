@@ -1,0 +1,27 @@
+.GameEntryForm {
+  height: 100%;
+}
+
+.backlogModal {
+  height: 100%;
+
+  fieldset {
+    width: 90%;
+  }
+}
+
+.userInput {
+  display: grid;
+  row-gap: 1.5rem;
+  width: 100%;
+  grid-template-columns: 60% 30%;
+}
+
+p {
+  padding: 0.5rem 0;
+  a {
+    &:visited {
+      color: rgb(var(--vs-primary));
+    }
+  }
+}

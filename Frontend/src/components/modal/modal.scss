@@ -1,0 +1,49 @@
+.modalWindow {
+  width: 100%;
+  z-index: 2;
+  position: fixed;
+  display: flex;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  backdrop-filter: blur(1.5px);
+}
+
+.modal {
+  display: flex;
+  width: 100%;
+  justify-items: center;
+  flex-direction: column;
+  // padding: 1.5% 2.5% 1.5% 2.5%;
+  background-color: white;
+  height: min(90%, 85rem);
+  width: min(85%, 80rem);
+  border-radius: 20px;
+  border: 0;
+  box-shadow: 0 5px 30px 0 rgb(0 0 0 / 10%);
+  animation: fadeIn 1s ease both;
+  gap: 0.5rem;
+  overflow-x: scroll;
+  position: relative;
+}
+
+.close {
+  // display: flex;
+  // justify-content: flex-end;
+
+  position: absolute;
+  right: 90%;
+  top: 1%;
+  right: 1%;
+  svg {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+.hidden {
+  display: none;
+}

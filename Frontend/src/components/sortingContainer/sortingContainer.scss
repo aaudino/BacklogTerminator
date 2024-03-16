@@ -1,0 +1,17 @@
+.SortingContainer {
+}
+
+.itemsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30rem, 30rem));
+  gap: 1.5rem; /* Adjust the gap between items as needed */
+  padding: 1rem;
+  justify-content: center;
+}
+
+.infoContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+  align-items: center;
+}
