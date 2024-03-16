@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Backlog Terminator is your ultimate solution for managing your video game backlog. Say goodbye to overwhelming lists and hello to prioritization. Seamlessly organize and prioritize your gaming backlog, ensuring you tackle your games in the most efficient order.",
   "scripts": {
-    "dev": "cd Frontend && npm start & cd Backend && npm start"
+    "dev": "cd Frontend && npm start & cd Backend && npm start",
+    "buildFrontend": "cd Frontend && npm build"
   },
   "author": "Anthony Audino",
   "license": "ISC"
