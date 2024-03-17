@@ -104,8 +104,8 @@ const BacklogOverviewItem = ({ backlogEntry, index }) => {
       {isModalOpen && (
         <Modal isOpen={isModalOpen} setIsModalOpen={setIsModalOpen}>
           <GameForm
-            saveUrl={`http://localhost:8999/api/backlog/addBacklogGame`}
-            deleteUrl={`http://localhost:8999/api/backlog/deleteBacklogGame`}
+            saveUrl={`${process.env.REACT_APP_API_URL}/api/backlog/addBacklogGame`}
+            deleteUrl={`${process.env.REACT_APP_API_URL}/api/backlog/deleteBacklogGame`}
             gameEntry={backlogEntry.backlogItem}
             userData={{ ...backlogEntry, backlogItem: undefined }}
             setIsModalOpen={setIsModalOpen}

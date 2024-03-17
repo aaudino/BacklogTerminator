@@ -9,7 +9,7 @@ const DemoButton = () => {
   const { dispatch } = useContext(authContext);
 
   const { setBodyData, data, postSuccess, error } = useCustomPost(
-    "http://localhost:8999/api/user/getDemoAccess"
+    `${process.env.REACT_APP_API_URL}/api/user/getDemoAccess`
   );
 
   const handleSubmit = async (event) => {

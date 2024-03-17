@@ -9,14 +9,18 @@ export const BacklogContextProvider = ({ children }) => {
     dataReady,
     setShouldFetch: setShouldFetchBacklogeEntries,
     error,
-  } = useCustomFetch("http://localhost:8999/api/backlog/getBacklogEntries");
+  } = useCustomFetch(
+    `${process.env.REACT_APP_API_URL}/api/backlog/getBacklogEntries`
+  );
 
   const {
     data: terminatedGames,
     dataReady: terminatedGamesDataReady,
     setShouldFetch: setShouldFetchTerminatedGames,
     error: terminatedGamesError,
-  } = useCustomFetch("http://localhost:8999/api/backlog/getTerminatedGames");
+  } = useCustomFetch(
+    `${process.env.REACT_APP_API_URL}/api/backlog/getTerminatedGames`
+  );
 
   const value = {
     backlogEntries,

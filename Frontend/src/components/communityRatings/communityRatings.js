@@ -7,7 +7,10 @@ import Star from "../ui/star/star";
 
 const CommunityRatings = ({ gameEntryId, gameReviews }) => {
   const { data, dataReady, setFetchParams, setShouldFetch, error } =
-    useCustomFetch("http://localhost:8999/api/backlog/getGameReviews", false);
+    useCustomFetch(
+      `${process.env.REACT_APP_API_URL}/api/backlog/getGameReviews`,
+      false
+    );
 
   const [userGameRatings, setUserGameRatings] = useState(
     gameReviews ? gameReviews : false

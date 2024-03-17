@@ -21,7 +21,7 @@ const Searchbar = (props) => {
     setFetchParams,
     setShouldFetch,
     error,
-  } = useCustomFetch(`http://localhost:8999/api/getData`, false);
+  } = useCustomFetch(`${process.env.REACT_APP_API_URL}/api/getData`, false);
 
   const {
     data: queryResults,
@@ -29,7 +29,7 @@ const Searchbar = (props) => {
     setFetchParams: setQueryResultsParams,
     setShouldFetch: setShouldFetchQueryResults,
     error: queryResultsError,
-  } = useCustomFetch(`http://localhost:8999/api/getGame`, false);
+  } = useCustomFetch(`${process.env.REACT_APP_API_URL}/api/getGame`, false);
 
   useEffect(() => {
     if (gameData) {
@@ -89,8 +89,8 @@ const Searchbar = (props) => {
       {isModalOpen && (
         <Modal isOpen={isModalOpen} setIsModalOpen={setIsModalOpen}>
           <GameForm
-            saveUrl={`http://localhost:8999/api/backlog/addBacklogGame`}
-            deleteUrl={`http://localhost:8999/api/backlog/deleteBacklogGame`}
+            saveUrl={`${process.env.REACT_APP_API_URL}/api/backlog/addBacklogGame`}
+            deleteUrl={`${process.env.REACT_APP_API_URL}/api/backlog/deleteBacklogGame`}
             gameEntry={gameEntry}
             setIsModalOpen={setIsModalOpen}
           />

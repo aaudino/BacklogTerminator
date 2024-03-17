@@ -28,7 +28,7 @@ function App() {
             !user ? (
               <UserForm
                 header="Sign-up"
-                postUrl={"http://localhost:8999/api/user/signUp"}
+                postUrl={`${process.env.REACT_APP_API_URL}/api/user/signUp`}
                 contextType={"LOGIN"}
               />
             ) : (
@@ -43,7 +43,7 @@ function App() {
             !user ? (
               <UserForm
                 header="Login"
-                postUrl={"http://localhost:8999/api/user/login"}
+                postUrl={`${process.env.REACT_APP_API_URL}//api/user/login`}
                 contextType={"LOGIN"}
               />
             ) : (
