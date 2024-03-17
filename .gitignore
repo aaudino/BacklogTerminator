@@ -5,7 +5,7 @@
 /Frontend/build
 /Backend/node_modules
 /Backend/config.env
-/Frontend/config.env
+/Frontend/.env
 
 /.pnp
 .pnp.js
