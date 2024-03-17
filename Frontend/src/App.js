@@ -43,7 +43,7 @@ function App() {
             !user ? (
               <UserForm
                 header="Login"
-                postUrl={`${process.env.REACT_APP_API_URL}//api/user/login`}
+                postUrl={`${process.env.REACT_APP_API_URL}/api/user/login`}
                 contextType={"LOGIN"}
               />
             ) : (
