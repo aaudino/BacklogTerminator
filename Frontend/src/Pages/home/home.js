@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 import "./home.scss";
-import heroWebm from "../../assets/hero.webm";
+import heroMp4 from "../../assets/hero_compressed.mp4";
 
 const Home = () => {
   const videoref = useRef(null);
@@ -12,8 +12,16 @@ const Home = () => {
   return (
     <>
       <div className="heroContainer">
-        <video ref={videoref} autoPlay muted loop className="">
-          <source src={heroWebm} type="video/webm" />
+        <video
+          ref={videoref}
+          autoPlay
+          muted
+          loop
+          playsinline="true"
+          disablePictureInPicture="true"
+          className=""
+        >
+          <source src={heroMp4} type="video/webm" />
         </video>
         <div className="headingContainer">
           <h1>Tired of not finishing your games ?</h1>
