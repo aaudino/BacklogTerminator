@@ -1,8 +1,14 @@
 .GameForm {
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2%;
 
   h2 {
     text-align: center;
+  }
+  .slider {
+    margin: 0;
   }
 }
 
@@ -26,6 +32,7 @@ form,
 
 .buttonContainer {
   display: flex;
-  margin-top: 1.5rem;
+  // margin-top: 1.5rem;
   justify-content: space-between;
+  align-items: center;
 }
