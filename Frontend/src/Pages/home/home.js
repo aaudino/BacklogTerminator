@@ -17,8 +17,8 @@ const Home = () => {
           autoPlay
           muted
           loop
-          playsInline="true"
-          disablePictureInPicture="true"
+          playsInline={true}
+          disablePictureInPicture={true}
         >
           <source src={heroMp4} type="video/webm" />
         </video>
