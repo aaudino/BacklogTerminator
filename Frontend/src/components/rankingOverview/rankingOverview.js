@@ -24,7 +24,6 @@ const RankingOverview = () => {
 
     backlogGames.forEach((game) => {
       const rating = game.backlogItem.rating;
-      console.log(game.hoursPlayed);
       const hoursToBeat =
         game.backlogItem.gameplayStyles[game.playstyleSelect] -
         (game.hoursPlayed || 0);
