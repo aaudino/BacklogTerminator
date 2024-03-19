@@ -19,9 +19,9 @@ const Home = () => {
           loop
           playsInline={true}
           disablePictureInPicture={true}
-        >
-          <source src={heroMp4} type="video/webm" />
-        </video>
+          src={heroMp4}
+          type="video/webm"
+        ></video>
         <div className="headingContainer">
           <h1>Tired of not finishing your games ?</h1>
           <h2>Backlog Terminator is here for you</h2>
