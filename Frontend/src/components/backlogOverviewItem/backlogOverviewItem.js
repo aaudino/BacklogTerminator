@@ -23,7 +23,7 @@ const BacklogOverviewItem = ({ backlogEntry, index }) => {
     <>
       <div
         key={index}
-        className="test"
+        className="backlogItem"
         onClick={(e) => openModal(backlogEntry)}
       >
         <img
