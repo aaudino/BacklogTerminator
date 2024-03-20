@@ -30,6 +30,13 @@ const Home = () => {
 
       <div className="presentationContainer">
         <div className="presentationContainer--item">
+          <h2>Disclaimer 🙇</h2>
+          <p>
+            This app is still in development. Please bear with us if you
+            encounter any bugs.
+          </p>
+        </div>
+        <div className="presentationContainer--item">
           <h2>What Backlog Terminator Does for You</h2>
           <p>
             Backlog Terminator is the ultimate companion for passionate gamers
