@@ -20,8 +20,6 @@ const SortingContainer = ({
   const { setLSValue } = useLocalStorage(lsKey);
   const selectRef = useRef(null);
 
-  console.log("DEFAULT:", defaultValue);
-
   let test = keyValuePairs(captions, "categoryCaption");
   test = { [noSortingValue]: noSortingValue, ...test };
 
@@ -61,7 +59,6 @@ const SortingContainer = ({
     if (eventValue === noSortingValue) {
       setCategorizationChoice(false);
     } else {
-      console.log("here");
       setCategorizationChoice({
         propertyName: eventValue,
         ...categorizationOptions[eventValue],

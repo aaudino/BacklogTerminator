@@ -35,10 +35,23 @@ dotenv.config({ path: "./config.env" });
 
 const app = new express();
 
+const whitelist = [
+  process.env.CORS,
+  process.env.CORS_1,
+  process.env.CORS_2,
+  process.env.CORS_3,
+];
+
 app.use(
   cors({
     credentials: true,
-    origin: process.env.CORS,
+    origin: function (origin, callback) {
+      if (whitelist.indexOf(origin) !== -1) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
   })
 );
 
