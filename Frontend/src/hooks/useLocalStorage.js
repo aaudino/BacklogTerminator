@@ -1,7 +1,7 @@
 function useLocalStorage(key) {
   function setLSValue(value) {
     try {
-      window.localStorage.setItem(key, JSON.stringify(value));
+      window.localStorage.setItem(key, value);
     } catch (error) {
       console.log(error);
     }
@@ -10,7 +10,7 @@ function useLocalStorage(key) {
   function getLSValue() {
     try {
       const value = window.localStorage.getItem(key);
-      return value ? value : undefined;
+      return value ? value : null;
     } catch (error) {
       console.log(error);
     }

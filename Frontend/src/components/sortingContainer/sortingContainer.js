@@ -5,17 +5,22 @@ import keyValuePairs from "../../utils/keyValuePairs";
 import Select from "../ui/select/select";
 import Fieldset from "../ui/fieldset/fieldset";
 import BacklogOverviewItem from "../backlogOverviewItem/backlogOverviewItem";
+import useLocalStorage from "../../hooks/useLocalStorage";
 
 const SortingContainer = ({
   captions,
   itemsToSort,
   defaultValue = "No Sorting",
   noSortingValue = "No Sorting",
+  lsKey,
   children,
 }) => {
   const [categorizationOptions, setCategorizationOptions] = useState({});
-  const [categorizationChoice, setCategorizationChoice] = useState(null);
+  const [categorizationChoice, setCategorizationChoice] = useState(undefined);
+  const { setLSValue } = useLocalStorage(lsKey);
   const selectRef = useRef(null);
+
+  console.log("DEFAULT:", defaultValue);
 
   let test = keyValuePairs(captions, "categoryCaption");
   test = { [noSortingValue]: noSortingValue, ...test };
@@ -52,9 +57,11 @@ const SortingContainer = ({
   }, [categorizationOptions]);
 
   const handleCategorization = (eventValue) => {
+    setLSValue(String(eventValue));
     if (eventValue === noSortingValue) {
       setCategorizationChoice(false);
     } else {
+      console.log("here");
       setCategorizationChoice({
         propertyName: eventValue,
         ...categorizationOptions[eventValue],
@@ -73,9 +80,8 @@ const SortingContainer = ({
         ></Select>
         {children}
       </div>
-
       <>
-        {categorizationChoice ? (
+        {categorizationChoice?.sortingValues ? (
           <>
             {categorizationChoice.sortingValues.map((value) => {
               let legendtext = value;

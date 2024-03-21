@@ -9,6 +9,7 @@ import Fieldset from "../ui/fieldset/fieldset";
 import Slider from "../ui/slider/slider";
 import SortingContainer from "../sortingContainer/sortingContainer";
 import Progressbar from "../ui/progressbar/progressbar";
+import useLocalStorage from "../../hooks/useLocalStorage";
 
 const BacklogOverview = () => {
   const {
@@ -33,6 +34,12 @@ const BacklogOverview = () => {
     playstyleSelect: { categoryCaption: "Playstyle" },
   };
 
+  const { getLSValue: getBacklogSortingLSValue } =
+    useLocalStorage("backlogSorting");
+
+  const { getLSValue: getBeatenSortingLSValue } =
+    useLocalStorage("beatenSorting");
+
   return (
     <div className="BacklogOverview">
       <Slider
@@ -43,9 +50,10 @@ const BacklogOverview = () => {
         <>
           <SortingContainer
             noSortingValue={"No Sorting"}
-            defaultValue={"No Sorting"}
+            defaultValue={getBacklogSortingLSValue() || "No Sorting"}
             captions={BacklogOptionCaptions}
             itemsToSort={backlogEntries}
+            lsKey={"backlogSorting"}
           >
             <Counter
               itemsToCount={backlogEntries.length}
@@ -62,9 +70,10 @@ const BacklogOverview = () => {
           ></Progressbar>
           <SortingContainer
             noSortingValue={"No Sorting"}
-            defaultValue={"No Sorting"}
+            defaultValue={getBeatenSortingLSValue() || "No Sorting"}
             captions={TerminatedOptionCaptions}
             itemsToSort={terminatedGames}
+            lsKey={"beatenSorting"}
           >
             <Counter
               itemsToCount={terminatedGames.length}
