@@ -9,8 +9,8 @@ const Ranking = () => {
     <BacklogContextProvider>
       <div className="Ranking">
         <div className="ranking-heading">
-          <h2> The Backlog Terminator Algorithm Presents:</h2>
-          <h1>Your Ultimate Gaming Playlist to Tackle Your Backlog!</h1>
+          <h2>The Backlog Terminator Algorithm Presents:</h2>
+          <h1>Your Ultimate Gaming Playlist To Tackle Your Backlog!</h1>
         </div>
 
         <RankingOverview />
